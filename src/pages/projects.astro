@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HrText from "../components/HrText.astro";
+import ProjectSummary from "../components/ProjectSummary.astro";
+
+const pageTitle = "Projects";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h1>Projects</h1>
+
+  <HrText text="2022" />
+  <ProjectSummary
+    name="Cozy Clues"
+    summary="Cozy Clues is a website that creates scavanger hunts for kids at home. Parents can choose different locations and puzzles to include, then print out the final scavanger hunt."
+  />
+
+  <ProjectSummary
+    name="Malwoden"
+    summary="A JS/TS roguelike library. Includes utilities for HTML ASCII canvas/tilesets and GUI widgets, mouse and keyboard input, pathfinding, fov/line of sight, map generation, and random number generation."
+  />
+  <ProjectSummary
+    name="Mal - A 7 Day Roguelike (7DRL) Challenge"
+    summary="A small game built in 7 days for the yearly 7DRL challenge. The game used the Malwoden game engine I created earlier that year."
+  />
+  <ProjectSummary
+    name="Malwoden Tutorial"
+    summary="An eleven part tutorial covering the Malwoden roguelike library, walking through the basics of roguelike map generation, player movement, combat, and inventory."
+  />
+  <ProjectSummary name="" summary="" />
+
+  <HrText text="2021" />
+  <ProjectSummary
+    name="Cacti Chess"
+    summary="A UCI compatible hobby chess engine, capable at playing ~1200 ELO. Created to learn golang."
+  />
+
+  <HrText text="2020" />
+  <ProjectSummary
+    name="tfschema"
+    summary="A small CLI allowing for schema discovery of undocumented terraform providers."
+  />
+
+  <HrText text="2016" />
+  <ProjectSummary
+    name="Hero48"
+    summary="A small android game made during the 2048 craze."
+  />
+</BaseLayout>
