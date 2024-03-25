@@ -8,42 +8,49 @@ const pageTitle = "Projects";
 
 <BaseLayout pageTitle={pageTitle}>
   <h1>Projects</h1>
+  <p>A collection of my personal projects. All made with only the finest, most artisinal of bugs.</p>
 
   <HrText text="2022" />
   <ProjectSummary
-    name="Cozy Clues"
+    title="Cozy Clues"
+    link="https://cozyclues.com/"
     summary="Cozy Clues is a website that creates scavanger hunts for kids at home. Parents can choose different locations and puzzles to include, then print out the final scavanger hunt."
   />
 
   <ProjectSummary
-    name="Malwoden"
+    title="Malwoden"
+    link="https://malwoden.com/"
     summary="A JS/TS roguelike library. Includes utilities for HTML ASCII canvas/tilesets and GUI widgets, mouse and keyboard input, pathfinding, fov/line of sight, map generation, and random number generation."
   />
   <ProjectSummary
-    name="Mal - A 7 Day Roguelike (7DRL) Challenge"
+    title="Mal - A 7 Day Roguelike (7DRL) Challenge"
+    link="https://aedalus.itch.io/malwoden-7drl"
     summary="A small game built in 7 days for the yearly 7DRL challenge. The game used the Malwoden game engine I created earlier that year."
   />
   <ProjectSummary
-    name="Malwoden Tutorial"
+    title="Malwoden Tutorial"
+    link="https://tutorial.malwoden.com/docs/intro/"
     summary="An eleven part tutorial covering the Malwoden roguelike library, walking through the basics of roguelike map generation, player movement, combat, and inventory."
   />
-  <ProjectSummary name="" summary="" />
 
   <HrText text="2021" />
   <ProjectSummary
-    name="Cacti Chess"
+    title="Cacti Chess"
+    link="https://github.com/Aedalus/cacti-chess"
     summary="A UCI compatible hobby chess engine, capable at playing ~1200 ELO. Created to learn golang."
   />
 
   <HrText text="2020" />
   <ProjectSummary
-    name="tfschema"
+    title="tfschema"
+    link="https://github.com/Aedalus/tfschema"
     summary="A small CLI allowing for schema discovery of undocumented terraform providers."
   />
 
   <HrText text="2016" />
   <ProjectSummary
-    name="Hero48"
+    title="Hero48"
+    link="https://github.com/Aedalus/Hero48Game"
     summary="A small android game made during the 2048 craze."
   />
 </BaseLayout>

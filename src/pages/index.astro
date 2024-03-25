@@ -1,8 +1,46 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "higgins.dev";
+
+import BlogSummary from "../components/BlogSummary.astro";
+import ProjectSummary from "../components/ProjectSummary.astro";
+const allPosts = await Astro.glob("../pages/posts/*.md");
+const recentPosts = allPosts.reverse().slice(0, 3);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1></h1>
+  <!-- Intro -->
+  <p>Hi, I'm Alex 🌊</p>
+  <p>Welcome to my blog.</p>
+
+  <!-- Recent Posts -->
+  <hr />
+  <h2 style="color: var(--secondary-text)">Recent Posts</h2>
+  {
+    recentPosts.map((post) => (
+      <BlogSummary
+        url={post.url}
+        title={post.frontmatter.title}
+        date={post.frontmatter.pubDate}
+        summary={post.frontmatter.summary}
+      />
+    ))
+  }
+  <hr />
+  <h2 style="color: var(--secondary-text)">Featured Projects</h2>
+
+  <ProjectSummary
+    title="Cozy Clues"
+    summary="Cozy Clues is a website that creates scavanger hunts for kids at home. Parents can choose different locations and puzzles to include, then print out the final scavanger hunt."
+  />
+
+  <ProjectSummary
+    title="Malwoden"
+    summary="A JS/TS roguelike library. Includes utilities for HTML ASCII canvas/tilesets and GUI widgets, mouse and keyboard input, pathfinding, fov/line of sight, map generation, and random number generation."
+  />
+
+  <ProjectSummary
+    title="Cacti Chess"
+    summary="A UCI compatible hobby chess engine, capable at playing ~1200 ELO. Created to learn golang."
+  />
 </BaseLayout>

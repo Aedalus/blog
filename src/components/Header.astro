@@ -1,11 +1,51 @@
 ---
-import Navigation from "./Navigation.astro";
-import Hamburger from "./Hamburger.astro"
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
+
+const getActive = (path: string) => (path === currentPath ? "active" : "");
 ---
 
+<style>
+  .header {
+    overflow: hidden;
+    padding: 20px 0;
+  }
+
+  .header a {
+    color: var(--secondary-text);
+    text-decoration: none;
+  }
+
+  .header-right {
+    float: right;
+  }
+  .header-right a {
+    margin-left: 5px;
+  }
+
+  .header-right a:hover {
+    color: var(--accent-light);
+  }
+
+  .header .active {
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    color: var(--accent-light);
+  }
+</style>
 <header>
   <nav>
-    <Hamburger/>
-    <Navigation />
+    <div class="header">
+      <a href="/">higgins.dev</a>
+      <div class="header-right">
+        <a href="/about" class={getActive("about")}>About</a>
+        <a href="/blog" class={getActive("blog")}>Blog</a>
+        <a href="/projects" class={getActive("projects")}>Projects</a>
+      </div>
+    </div>
+    <hr />
   </nav>
 </header>

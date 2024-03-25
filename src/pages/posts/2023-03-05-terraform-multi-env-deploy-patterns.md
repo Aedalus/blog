@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/MarkdownPostLayout.astro"
 title: Multi Environment Terraform
-pubDate: "2023-07-19"
+pubDate: "2023-03-05"
 image:
   url: "https://docs.astro.build/assets/arc.webp"
   alt: "Thumbnail of Astro arcs."

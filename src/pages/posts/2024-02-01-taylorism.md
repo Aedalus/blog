@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/MarkdownPostLayout.astro"
 title: Taylorism
-pubDate: "2023-08-01"
+pubDate: "2024-02-01"
 image:
   url: "https://docs.astro.build/assets/arc.webp"
   alt: "Thumbnail of Astro arcs."
