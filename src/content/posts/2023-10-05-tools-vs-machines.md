@@ -9,6 +9,8 @@ tags:
   - Craftsmanship
 summary: |
   Brief thoughts on the difference, and how it pertains to the world of software.
+
+# draft: true
 ---
 
 I recently came across a short excerpt from **Anand Coomaraswamy's** **_ART AND SWADESHI_** that I found rather powerful. In it he makes a distinction between two kinds of instruments we use in our day to day work: tools and machines.

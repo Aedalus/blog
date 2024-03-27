@@ -10,3 +10,4 @@
   - Organic Commandments
 
 - Favorite things section
+- ToDo - Find a typo, open a pull-request

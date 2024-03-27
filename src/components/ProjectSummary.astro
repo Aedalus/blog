@@ -1,5 +1,6 @@
 ---
-const { title, date, summary, highlights = [] } = Astro.props;
+const { title, date, url, summary, highlights = [] } = Astro.props;
+import { Icon } from 'astro-icon/components'
 ---
 
 <style>
@@ -25,32 +26,50 @@ const { title, date, summary, highlights = [] } = Astro.props;
   .summary {
     color: var(--primary-text);
   }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  .title-container:hover {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 1em;
+    color: var(--accent-dark);
+  }
+
+  .title-container h3 {
+    margin: 0;
+    margin-right: .5em;
+  }
+
+  .title-container svg {
+    color: var(--accent-light);
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .title-container:hover * {
+    color: var(--accent-dark);
+  }
+
 </style>
 <div class="blog-summary">
-  <h3 class="">{title}</h3>
+  <a class="title-container" href={url}>
+    <h3>{title} </h3>
+    <Icon name="external-link-outline" />
+  </a>
+    
   <p class="summary">{summary}</p>
   {
     date && (
       <div class="date">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style="margin-right: 10px;"
-        >
-          <path
-            d="M8 9C7.44772 9 7 9.44771 7 10C7 10.5523 7.44772 11 8 11H16C16.5523 11 17 10.5523 17 10C17 9.44771 16.5523 9 16 9H8Z"
-            fill="currentColor"
-          />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z"
-            fill="currentColor"
-          />
-        </svg>
+
         <p>{date}</p>
       </div>
     )

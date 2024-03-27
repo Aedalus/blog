@@ -5,12 +5,13 @@ const pageTitle = "higgins.dev";
 import BlogSummary from "../components/BlogSummary.astro";
 import ProjectSummary from "../components/ProjectSummary.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
-const recentPosts = allPosts.reverse().slice(0, 3);
+const filteredPosts = allPosts.filter(x => x.frontmatter.published)
+const recentPosts = filteredPosts.reverse().slice(0, 3);
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <!-- Intro -->
-  <p>Hi, I'm Alex 🌊</p>
+  <p>🌊 Hi, I'm Alex</p>
   <p>Welcome to my blog.</p>
 
   <!-- Recent Posts -->
