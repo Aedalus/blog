@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: var(--accent-dark);
+  color: var(--accent-light);
 }
 
 strong {

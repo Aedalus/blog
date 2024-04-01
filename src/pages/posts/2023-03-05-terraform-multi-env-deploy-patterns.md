@@ -8,7 +8,7 @@ image:
 tags:
   - Terraform
 summary: |
-  Deploying terraform is hard. Far harder than writing it. While there are a few established patterns, most come with some sharp trade-offs when considering multi-environment setups.
+  Deploying terraform is harder than writing it.
 published: true
 ---
 

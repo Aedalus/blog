@@ -5,15 +5,23 @@ const username = "withastro";
 
 <style>
   footer {
-    display: flex;
     gap: 1rem;
     margin-top: 2rem;
+  }
+
+  .flex {
+    display: "flex";
   }
 </style>
 
 <hr />
-<footer style="width: 100%;">
-  <p>Copyright © 2024 | All rights reserved.</p>
-  <div style="flex: 1"/>
-  <p>ToDo - GH Links</p>
+<footer>
+  <div>
+    <span>Find a typo? </span>
+    <a href="https://github.com/Aedalus/blog">Open a Pull Request</a>
+    <span> here!</span>
+  </div>
+  <div style="display: flex">
+    <p>© {new Date().getFullYear()} Alex Higgins | All rights reserved.</p>
+  </div>
 </footer>

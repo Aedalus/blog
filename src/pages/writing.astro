@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Blog";
-import BlogSummary from "../components/BlogSummary.astro";
+const pageTitle = "Writing";
+import PostSummary from "../components/PostSummary.astro";
 
 const allPosts = await Astro.glob("./posts/*.md")
-const filteredPosts = allPosts.filter(x => x.frontmatter.published)
+const filteredPosts = allPosts.filter(x => x.frontmatter.published).reverse()
 ---
 
 <style>
@@ -16,11 +16,12 @@ const filteredPosts = allPosts.filter(x => x.frontmatter.published)
   {
     filteredPosts.map((post) => (
       <>
-        <BlogSummary
+        <PostSummary
           url={post.url}
           title={post.frontmatter.title}
           date={post.frontmatter.pubDate}
           summary={post.frontmatter.summary}
+          tags={post.frontmatter.tags}
         />
       </>
     ))
