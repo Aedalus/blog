@@ -1,53 +1,152 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+import ExperienceSummary from "../components/ExperienceSummary.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>Personal</h2>
-  <p>👋 I'm Alex Higgins.</p>
-  <p>
-    In 2016 I got a Bachelor of Computer Science from the University of Georgia.
-    It was great, many classes were held in the Poultry Sciences building. Since
-    then I've worked at Acuity Brands, Candid Partners, and Greenlight. I tend
-    to bounce between full-stack development and cloud engineering.
-  </p>
+<style>
+  .skills {
+    width: 90%;
+    padding-left: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+  }
+  .skills li {
+    background: var(--accent-dark);
+    border-radius: 5px 2px 5px 2px;
+    padding: 3px 5px;
+    display: inline-block;
+    margin-right: .5em;
+    margin-bottom: .5em;
+    color: var(--primary-bg);
+    word-wrap: none;
+  }
 
-  <h2>Hobbies</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <h2>Media</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <h2>Professional</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
-  <h2>Work History</h2>
+</style>
+<BaseLayout pageTitle={pageTitle}>
+  <h2 style="color: white;"> Skills </h2>
+
+
+  Backend
+  <ul class="skills">
+    <li>Javascript/Typescript/Node</li>
+    <li>Golang</li>
+    <li>MySQL</li>
+    <li>Mongo</li>
+    <li>DynamoDB</li>
+  </ul>
+
+  Frontend
+  <ul class="skills">
+    <li>Javascript/Typescript</li>
+    <li>React</li>
+    <li>Redux</li>
+    <li>Zustand</li>
+    <li>Astro</li>
+    <li>GraphQL</li>
+    <li>Rest</li>
+  </ul>
+
+  CI/CD
+  <ul class="skills">
+    <li>Spacelift</li>
+    <li>Github Actions</li>
+    <li>CircleCI</li>
+    <li>Spacelift</li>
+  </ul>
+
+  Cloud
+  <ul class="skills">
+    <li>AWS</li>
+    <li>Terraform</li>
+    <li>Terragrunt</li>
+    <li>Kubernetes</li>
+  </ul>
+
+  <!-- Experience -->
+  <hr />
+  <h2 style="color: var(--secondary-text)">Experience</h2>
+
+  <ExperienceSummary
+    title="Greenlight"
+    date="Aug 2022 - Current - Staff Cloud Engineer"
+    highlights={[
+      "Strong focus on democratizing Infrastructure within the organization.",
+      "Standardized over a hundred IaC projects around Terraform, Terragrunt, and Spacelift. Heavily utilized custom HCL parsing and automation to perform automation in bulk.",
+      "Wrote dozens of standard Terraform modules around AWS services, ensuring best practices and lowering overhead for other teams to consume.",
+      "Maintained RBAC configuration and security guardrails using Spacelift's Open Policy Agent engine.",
+      "Created TFX, an internal CLI tool to supercharge setting up terraform projects, modules, and pipelines. Reduced new project setup time from ~30-60 minutes to ~5 minutes with fewer user errors.",
+      "Provided living user-centeric documentation for Terraform/Cloud onboarding.",
+      "Involved in a number of Employee Resource Groups, including \"Staff+ Coffee Talks\", \"Engineer Mentorship\" and cross-org \"Aspiring Engineers\"."
+    ]}
+  />
+  <ExperienceSummary
+    date="May 2020 - Aug 2022 - Senior Cloud Engineer"
+    highlights={[
+      "Ingested significant existing infrastructure into terraform.",
+      "Delivered dedicated infrastructure for a new B2B offering, leveraging Terraform, AWS, and K8s.",
+      "Created and implemented multi-region active/passive infrastructure in microservice environments for both B2B and D2C offerings.",
+      "Performed routine zero-downtime active/passive failovers for routine maintenance, as well as mitigation for AWS outages.",
+      "Managed multiple products and environments spanning over 20 AWS Accounts and 30 EKS clusters."
+    ]}
+  />
+
+  <ExperienceSummary
+    title="A Cloud Guru"
+    date="Mar 2019 - Jul 2019 - Instructor (Part-time)"
+    highlights={[
+      'Created the "Practical Event-Driven Security with AWS" course.',
+      "Covered basic information and best-practices for services like AWS CloudTrail, CloudWatch, GuardDuty, Macie, Config, etc.",
+    ]}
+  />
+
+  <ExperienceSummary
+    title="Candid Partners"
+    date="Jun 2019 - May 2020 - Software Platform Lead"
+    highlights={[
+      "Created a Terraform SaaS offering, licensed to multiple Fortune 50 companies.",
+      "Product helped provision client terraform, and scan for security problems across AWS, Google Cloud, and Azure.",
+      "Tech Lead within a fullstack typescript Serverless/React/AWS ecosystem.",
+    ]}
+  />
+  <ExperienceSummary
+    date="Sep 2018 - Jun 2019 - Devops Engineer"
+    highlights={[
+      "Worked with Fortune 500 client teams to provide AWS architecture guidance. Focus on Serverless and Active/Active architectures.",
+      "CI/CD pipelines with GoCD and CircleCI for internal projects.",
+      "Leveraged Terraform to create and maintain application environments.",
+      "Created a compliance scanning tool for terraform to ensure compliance with standard security frameworks.",
+      "Acted as scrum master for multiple teams and projects",
+    ]}
+  />
+  <ExperienceSummary
+    title="Acuity Brands"
+    date="Sep 2016 - Jun 2017 - Software Engineer"
+    highlights={[
+      "Developed backend systems leveraging C#, Node, and Swagger documentation.",
+      "Developed frontend systems for lighting products (Angular/React/Aurelia).",
+      "Created mock API servers to decouple frontend and backend teams.",
+      "Built and maintained Azure CI/CD pipelines for projects.",
+    ]}
+  />
+
+  <!-- Education -->
+  <hr />
+  <h2 style="color: var(--secondary-text)">Education</h2>
+  <ExperienceSummary
+    title="University of Georgia"
+    date="Aug 2012 - May 2016"
+    highlights={["BS in Computer Science"]}
+  />
+
+  <!-- Certifications -->
+  <hr />
+  <h2 style="color: var(--secondary-text)">Certifications</h2>
+  <ul>
+    <li>Scrum Alliance - Certified ScrumMaster</li>
+    <li>AWS - Associate Developer</li>
+    <li>AWS - Associate Solutions Architect</li>
+    <li>AWS - Associate SysOps Administrator</li>
+    <li>AWS - Professional Solutions Architect</li>
+  </ul>
 </BaseLayout>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Writing";
+import PostSummary from "../components/PostSummary.astro";
+
+const allPosts = await Astro.glob("./posts/*.md")
+const filteredPosts = allPosts.filter(x => x.frontmatter.published).reverse()
+---
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
+<BaseLayout pageTitle={pageTitle}>
+  {
+    filteredPosts.map((post) => (
+      <>
+        <PostSummary
+          url={post.url}
+          title={post.frontmatter.title}
+          date={post.frontmatter.pubDate}
+          summary={post.frontmatter.summary}
+          tags={post.frontmatter.tags}
+        />
+      </>
+    ))
+  }
+</BaseLayout>

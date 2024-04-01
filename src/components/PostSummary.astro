@@ -1,0 +1,46 @@
+---
+const { url, title, date, summary, tags = [] } = Astro.props;
+---
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  .blog-summary {
+    margin-bottom: 3em;
+  }
+  .blog-summary h3 {
+    margin-bottom: 0;
+    font-size: 1.3em;
+  }
+  .date {
+    display: flex;
+    align-items: center;
+  }
+  .date p {
+    line-height: 5%;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .summary {
+    color: var(--primary-text);
+    margin-top: 0;
+  }
+
+  .title:hover {
+    color: var(--accent-dark);
+  }
+</style>
+<div class="blog-summary">
+  <a href={url}>
+    <h3 class="title">{title}</h3>
+  </a>
+
+  <div class="date">
+    <p>
+      {date} - {tags.join(" ")}
+    </p>
+  </div>
+
+  <p class="summary">{summary}</p>
+</div>

@@ -13,6 +13,7 @@ const { text } = Astro.props;
   .strike > span {
     position: relative;
     display: inline-block;
+    color: var(--accent-dark);
   }
 
   .strike > span:before,
@@ -22,7 +23,7 @@ const { text } = Astro.props;
     top: 50%;
     width: 9999px;
     height: 1px;
-    background: var(--primary-text);
+    background: var(--accent-dark);
   }
 
   .strike > span:before {

@@ -1,8 +1,82 @@
 ---
-const { name, dates, summary } = Astro.props;
+const { title, date, url, summary, highlights = [] } = Astro.props;
+import { Icon } from 'astro-icon/components'
 ---
 
-<div>
-  <h2>{name}</h2>
-  <p>{summary}</p>
+<style>
+  .blog-summary {
+    margin-bottom: 3em;
+  }
+  .blog-summary h3 {
+    color: var(--accent-light);
+    margin-bottom: 0;
+    font-size: 1.3em;
+  }
+  .date {
+    display: flex;
+    align-items: center;
+    margin-bottom: -1em;
+  }
+  .date p {
+    line-height: 5%;
+    font-style: italic;
+    font-size: 0.8em;
+    margin: 0.5;
+  }
+  .summary {
+    color: var(--primary-text);
+    margin-top: .25em;
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 1em;
+    cursor: pointer;
+  }
+
+  .title-container:hover {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 1em;
+    color: var(--accent-dark);
+  }
+
+  .title-container h3 {
+    margin: 0;
+    margin-right: .5em;
+  }
+
+  .title-container svg {
+    color: var(--accent-light);
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .title-container:hover * {
+    color: var(--accent-dark);
+  }
+
+</style>
+<div class="blog-summary">
+  <a class="title-container" href={url}>
+    <h3>{title} </h3>
+    <Icon name="external-link-outline" />
+  </a>
+    
+  <p class="summary">{summary}</p>
+  {
+    date && (
+      <div class="date">
+
+        <p>{date}</p>
+      </div>
+    )
+  }
+
+  <ul>
+    {highlights.map((x: string) => <li>{x}</li>)}
+  </ul>
 </div>

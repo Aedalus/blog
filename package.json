@@ -8,12 +8,14 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "publish-dev": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "@astrojs/rss": "^4.0.4",
+    "@fontsource/ibm-plex-mono": "^5.0.12",
     "astro": "^4.2.6",
+    "astro-icon": "1.0.4",
     "typescript": "^5.3.3"
   }
 }
