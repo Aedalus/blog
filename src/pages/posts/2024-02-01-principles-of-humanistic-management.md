@@ -46,7 +46,7 @@ To make it harder, it's easier to imagine an end to Taylorism than to imagine wh
 
 ## Post Taylorism
 
-One thing I try to take comfort in is that Frederick Taylor was just one man, and yet had this huge, complicated impact on society. If it hadn't been Frederick Taylor, it seems like it would have been someone else putting forward the same ideas. But at one time this way of thinking was _not_ the norm, and instead the avant-garde. If we as a society have changed out thinking here before, I would hope we could do it again. Only this time, hopefully trying to optimize more enlightened ideals than economic efficiency.
+One thing I try to take comfort in is that Frederick Taylor was just one man, and yet had this huge, complicated impact on society. If it hadn't been Frederick Taylor, it seems like it would have been someone else putting forward the same ideas. But at one time this way of thinking was _not_ the norm, and instead the avant-garde. If we as a society have changed our thinking here before, I would hope we could do it again. Only this time, hopefully trying to optimize more enlightened ideals than economic efficiency.
 
 To me the most surprising part of learning about Frederick Taylor was understanding just how much of a _playbook_ he had while implementing his ideas. So what if we sought **principles of humanistic management**? Could it really be as easy as flipping Taylor's initial principles on their head?
 

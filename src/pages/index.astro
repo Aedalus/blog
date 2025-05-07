@@ -5,7 +5,7 @@ const pageTitle = "higgins.dev";
 import PostSummary from "../components/PostSummary.astro";
 import ProjectSummary from "../components/ProjectSummary.astro";
 const allPosts = await Astro.glob("../pages/posts/*.md");
-const filteredPosts = allPosts.filter(x => x.frontmatter.published)
+const filteredPosts = allPosts.filter((x) => x.frontmatter.published);
 const recentPosts = filteredPosts.reverse().slice(0, 3);
 ---
 
@@ -33,16 +33,19 @@ const recentPosts = filteredPosts.reverse().slice(0, 3);
 
   <ProjectSummary
     title="Cozy Clues"
+    url="https://cozyclues.com/"
     summary="Cozy Clues is a website that creates scavanger hunts for kids at home. Parents can choose different locations and puzzles to include, then print out the final scavanger hunt."
   />
 
   <ProjectSummary
     title="Malwoden"
+    url="https://malwoden.com/"
     summary="A JS/TS roguelike library. Includes utilities for HTML ASCII canvas/tilesets and GUI widgets, mouse and keyboard input, pathfinding, fov/line of sight, map generation, and random number generation."
   />
 
   <ProjectSummary
     title="Cacti Chess"
+    url="https://github.com/Aedalus/cacti-chess"
     summary="A UCI compatible hobby chess engine, capable at playing ~1200 ELO. Created to learn golang."
   />
 </BaseLayout>

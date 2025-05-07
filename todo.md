@@ -9,5 +9,10 @@
   - Using the HCL Parser for a custom language
   - Organic Commandments
 
+- Favorites
+
+  - https://garden.bradwoods.io/notes/design/juice
+  - https://www.designspells.com/
+
 - Favorite things section
 - ToDo - Find a typo, open a pull-request

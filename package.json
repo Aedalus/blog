@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "resize": "find public/images -type f -name '*.png' -exec sips -Z 640 {} \\;",
     "deploy": "npm run build && firebase deploy"
   },
   "dependencies": {
