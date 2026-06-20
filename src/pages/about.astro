@@ -5,115 +5,129 @@ import ExperienceSummary from "../components/ExperienceSummary.astro";
 ---
 
 <style>
-  .skills {
-    width: 90%;
-    padding-left: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
-  .skills li {
-    background: var(--accent-dark);
-    border-radius: 5px 2px 5px 2px;
-    padding: 3px 5px;
-    display: inline-block;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-    color: var(--primary-bg);
-    word-wrap: none;
-  }
+    .skills {
+        width: 90%;
+        padding-left: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    .skills li {
+        background: var(--accent-dark);
+        border-radius: 5px 2px 5px 2px;
+        padding: 3px 5px;
+        display: inline-block;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        color: var(--primary-bg);
+        word-wrap: none;
+    }
 </style>
 <BaseLayout pageTitle={pageTitle}>
-  <a
-    aria-label="Open pdf"
-    href="/alex.higgins.resume.2024.pdf"
-    style="text-decoration: none;"
-  >
-    📃 PDF Version 📃
-  </a>
-  <hr />
-  <h2 style="color: white;">Skills</h2>
+    <a
+        aria-label="Open pdf"
+        href="/alex.higgins.resume.2024.pdf"
+        style="text-decoration: none;"
+    >
+        📃 PDF Version 📃
+    </a>
+    <hr />
+    <h2 style="color: white;">Skills</h2>
 
-  Development
-  <ul class="skills">
-    <li>Golang</li>
-    <li>Javascript</li>
-    <li>Typescript</li>
-    <li>Node</li>
-    <li>React</li>
-    <li>MySQL</li>
-    <li>Mongo</li>
-    <li>Serverless</li>
-  </ul>
+    Development
+    <ul class="skills">
+        <li>Golang</li>
+        <li>Javascript</li>
+        <li>Typescript</li>
+        <li>Node</li>
+        <li>React</li>
+        <li>MySQL</li>
+        <li>Mongo</li>
+        <li>Serverless</li>
+    </ul>
 
-  Cloud/Ops
-  <ul class="skills">
-    <li>AWS</li>
-    <li>Terraform</li>
-    <li>Github Actions</li>
-    <li>Kubernetes</li>
-    <li>Docker</li>
-    <li>Helm</li>
-    <li>Datadog</li>
-  </ul>
+    Cloud/Ops
+    <ul class="skills">
+        <li>AWS</li>
+        <li>Terraform</li>
+        <li>Github Actions</li>
+        <li>Kubernetes</li>
+        <li>Docker</li>
+        <li>Helm</li>
+        <li>Datadog</li>
+    </ul>
 
-  <!-- Experience -->
-  <hr />
-  <h2 style="color: var(--secondary-text)">Experience</h2>
+    <!-- Experience -->
+    <hr />
+    <h2 style="color: var(--secondary-text)">Experience</h2>
 
-  <ExperienceSummary
-    title="Greenlight"
-    date="May 2020 - Current - Staff Cloud Engineer"
-    highlights={[
-      "Set AWS Organization standards across more than twenty accounts.",
-      "Led multi-region active/passive strategy for multiple products.",
-      "Created a self-service Terraform platform to support over 150 microservices in a K8s ecosystem.",
-      "Automated mass migrations around service infrastructure and helm definitions.",
-    ]}
-  />
+    <ExperienceSummary
+        title="Articulate"
+        date="Nov 2024 - Current"
+        highlights={[
+            "Guided CI/CD, local development, and AWS/K8s practices.",
+            "Maintained CLI and Slackbot tools powering a self-service platform.",
+            "Expanded internal Developer Portal capabilities for 300+ engineers.",
+            "Led OpsLevel campaigns across 300+ services with PeopleOps-backed charitable giving.",
+            "Ran developer surveys and roundtables to shape the roadmap.",
+            "Drove AI tooling adoption across engineering teams.",
+            "Built AI agents and workflows to automate engineering toil.",
+        ]}
+    />
 
-  <ExperienceSummary
-    title="A Cloud Guru"
-    date="Mar 2019 - Jul 2019 - Instructor (Part-time)"
-    highlights={[
-      "Created the “Practical Event-Driven Security with AWS” online course.",
-    ]}
-  />
+    <ExperienceSummary
+        title="Greenlight"
+        date="May 2020 - Nov 2024"
+        highlights={[
+            "Set AWS Organization standards across more than twenty accounts.",
+            "Led multi-region active/passive strategy for multiple products.",
+            "Created a self-service Terraform platform to support over 150 microservices in a K8s ecosystem.",
+            "Automated mass migrations around service infrastructure and helm definitions.",
+        ]}
+    />
 
-  <ExperienceSummary
-    title="Candid Partners"
-    date="Jun 2017 - May 2020 - Tech Lead"
-    highlights={[
-      "Provided cloud consulting to Fortune 500 clients, including architecture and implementation.",
-      "Strong focus on Serverless and multi-region strategies.",
-      "Full-Stack Tech Lead for Terraform SaaS solution to automate provisioning and compliance.",
-    ]}
-  />
+    <ExperienceSummary
+        title="A Cloud Guru"
+        date="Mar 2019 - Jul 2019 - Instructor (Part-time)"
+        highlights={[
+            "Created the “Practical Event-Driven Security with AWS” online course.",
+        ]}
+    />
 
-  <ExperienceSummary
-    title="Acuity Brands"
-    date="Sep 2016 - Jun 2017 - Software Engineer"
-    highlights={[
-      "Developed frontend and backend systems to support smart lighting products.",
-      "Built and maintained CI/CD tooling using Azure pipelines.",
-    ]}
-  />
+    <ExperienceSummary
+        title="Candid Partners"
+        date="Jun 2017 - May 2020 - Tech Lead"
+        highlights={[
+            "Provided cloud consulting to Fortune 500 clients, including architecture and implementation.",
+            "Strong focus on Serverless and multi-region strategies.",
+            "Full-Stack Tech Lead for Terraform SaaS solution to automate provisioning and compliance.",
+        ]}
+    />
 
-  <!-- Education -->
-  <hr />
-  <h2 style="color: var(--secondary-text)">Education</h2>
-  <ExperienceSummary
-    title="University of Georgia"
-    date="Aug 2012 - May 2016"
-    highlights={["BS in Computer Science"]}
-  />
+    <ExperienceSummary
+        title="Acuity Brands"
+        date="Sep 2016 - Jun 2017 - Software Engineer"
+        highlights={[
+            "Developed frontend and backend systems to support smart lighting products.",
+            "Built and maintained CI/CD tooling using Azure pipelines.",
+        ]}
+    />
 
-  <!-- Certifications -->
-  <hr />
-  <h2 style="color: var(--secondary-text)">Certifications</h2>
-  <ul>
-    <li>AWS - Associate Developer</li>
-    <li>AWS - Associate Solutions Architect</li>
-    <li>AWS - Associate SysOps Administrator</li>
-    <li>AWS - Professional Solutions Architect</li>
-  </ul>
+    <!-- Education -->
+    <hr />
+    <h2 style="color: var(--secondary-text)">Education</h2>
+    <ExperienceSummary
+        title="University of Georgia"
+        date="Aug 2012 - May 2016"
+        highlights={["BS in Computer Science"]}
+    />
+
+    <!-- Certifications -->
+    <hr />
+    <h2 style="color: var(--secondary-text)">Certifications</h2>
+    <ul>
+        <li>AWS - Associate Developer</li>
+        <li>AWS - Associate Solutions Architect</li>
+        <li>AWS - Associate SysOps Administrator</li>
+        <li>AWS - Professional Solutions Architect</li>
+    </ul>
 </BaseLayout>
